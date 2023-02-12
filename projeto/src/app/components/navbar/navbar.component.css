@@ -1,0 +1,13 @@
+.navbar {
+  border-bottom: 2px solid black;
+}
+
+.nav-item {
+  font-size: 30px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.active-teste {
+  color: rgb(149, 197, 58);
+}
