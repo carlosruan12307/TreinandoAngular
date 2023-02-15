@@ -1,6 +1,9 @@
 .navbar {
   border-bottom: 2px solid black;
 }
+#teste {
+  transition: height 0s ease-in-out;
+}
 
 .nav-item {
   font-size: 30px;

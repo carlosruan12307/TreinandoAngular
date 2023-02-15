@@ -1,0 +1,54 @@
+.container-moments {
+  display: flex;
+  width: 100%;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5em;
+}
+.container-search {
+  display: flex;
+
+  width: 20%;
+  border: solid 3px rgb(149, 197, 58);
+
+  position: relative;
+}
+.input-moments::placeholder {
+  text-align: center;
+}
+.input-moments {
+  text-align: center;
+  padding: 0px 5px 0px 30px;
+}
+.input-moments {
+  width: 100%;
+  transition: border 0.1s ease-in-out;
+}
+.input-moments:focus {
+  border: 4px solid rgb(68, 102, 6);
+}
+.container-search i {
+  position: absolute;
+  padding: 3px;
+  height: 100%;
+
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0px;
+  left: 0px;
+}
+
+@media screen and (max-width: 1420px) {
+  .container-search {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 620px) {
+  .container-search {
+    width: 90%;
+  }
+}

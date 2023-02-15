@@ -1,12 +1,23 @@
-<div class="container-compartilhar">
-  <h1 >Veja o que estão compartilhando:</h1>
+<section class="container-compartilhar">
+  <div>
+    <h1 class="text-main mt-5">Compartilhe o seu <span class="destaque">momento</span>!</h1>
+    <form class="form mt-5" >
+      <div class="container-form d-flex flex-column">
+        <div class="form-group  ">
+          <label class="form-label">Titulo:</label>
+          <input class="form-control " placeholder="meu melhor momento">
+        </div>
+        <div class="form-group mt-3">
+          <label class="form-label">Descrição:</label>
+          <input class="form-control " placeholder="meu melhor momento">
+        </div>
+        <h5 class="mt-3">Coloque uma foto que mais marcou: </h5>
+        <input class="mt-3" type="file"  >
 
-  <div class="container-search m-4" >
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <input class="input-compartilhar" type="text" placeholder="Ou busque por um momento..." name="name" [(ngModel)]="busca"/>
+        <button type="submit" class="button-submit">Compartilhar!</button>
+      </div>
 
+      </form>
   </div>
 
-
-
-</div>
+</section>
