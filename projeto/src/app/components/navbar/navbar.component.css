@@ -1,7 +1,7 @@
 .navbar {
   border-bottom: 2px solid black;
 }
-#teste {
+#nav {
   transition: height 0s ease-in-out;
 }
 

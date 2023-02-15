@@ -1,6 +1,6 @@
-import { SobreComponent } from './components/sobre/sobre.component';
-import { CompartilharComponent } from './components/compartilhar/compartilhar.component';
-import { momentsComponent } from './components/moments/moments.component';
+import { SobreComponent } from './components/pages/sobre/sobre.component';
+import { CompartilharComponent } from './components/pages/compartilhar/compartilhar.component';
+import { momentsComponent } from './components/pages/moments/moments.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 

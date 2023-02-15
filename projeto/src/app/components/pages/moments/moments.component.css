@@ -9,9 +9,8 @@
 }
 .container-search {
   display: flex;
-
+  height: 4vh;
   width: 20%;
-  border: solid 3px rgb(149, 197, 58);
 
   position: relative;
 }
@@ -24,14 +23,11 @@
 }
 .input-moments {
   width: 100%;
-  transition: border 0.1s ease-in-out;
 }
-.input-moments:focus {
-  border: 4px solid rgb(68, 102, 6);
-}
+
 .container-search i {
   position: absolute;
-  padding: 3px;
+  padding: 0.3em;
   height: 100%;
 
   font-size: 20px;
