@@ -31,6 +31,7 @@ public class MomentsModel {
     @Temporal(TemporalType.DATE)
     private Date data;
 
+    private String url;
     private String sobre;
     @OneToMany(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "momento_id", referencedColumnName = "id")

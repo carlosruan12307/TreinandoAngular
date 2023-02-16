@@ -30,8 +30,8 @@ public class MomentsService {
     @Autowired
     private ComentarioRepository comentarioRepository;
 
-    public ResponseEntity<MomentResponse> cadastrarMomento(MomentsModel moment) {
-
+    public ResponseEntity<MomentResponse> cadastrarMomento(MomentsModel moment, String url) {
+        moment.setUrl(url);
         mRepository.save(moment);
 
         momentResponse.setMensagem("cadastrado com sucesso");
