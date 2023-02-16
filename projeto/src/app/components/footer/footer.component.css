@@ -1,0 +1,10 @@
+.destaque {
+  color: rgb(149, 197, 58);
+}
+.container-footer {
+  height: 20vh;
+  border-top: 3px solid rgb(149, 197, 58);
+}
+.container-main {
+  width: 22%;
+}

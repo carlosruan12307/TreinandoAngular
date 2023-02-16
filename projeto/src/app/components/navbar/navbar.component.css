@@ -1,5 +1,5 @@
 .navbar {
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid rgb(161, 157, 157);
 }
 #nav {
   transition: height 0s ease-in-out;
