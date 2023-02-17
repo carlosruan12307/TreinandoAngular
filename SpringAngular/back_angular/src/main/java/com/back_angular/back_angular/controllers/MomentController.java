@@ -13,6 +13,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -25,6 +26,8 @@ import com.back_angular.back_angular.responses.MomentResponse;
 import com.back_angular.back_angular.services.MomentsService;
 import com.back_angular.back_angular.webmvc.WebMvc;
 import com.fasterxml.jackson.databind.ObjectMapper;
+
+import jakarta.websocket.server.PathParam;
 
 @RestController
 @CrossOrigin(origins = "*")
@@ -52,5 +55,10 @@ public class MomentController {
         }
         return mService.cadastrarMomento(moment, (webMvc.getUrlImages() + file.getOriginalFilename()));
 
+    }
+
+    @GetMapping("/momento/{id}")
+    public MomentsModel getMomento(@PathVariable("id") Long id) {
+        return mService.getMomento(id);
     }
 }

@@ -1,5 +1,6 @@
 package com.back_angular.back_angular.models;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
@@ -21,7 +22,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Table(name = "moments")
-public class MomentsModel {
+public class MomentsModel implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -33,7 +34,7 @@ public class MomentsModel {
 
     private String url;
     private String sobre;
-    @OneToMany(cascade = CascadeType.PERSIST)
+    @OneToMany(cascade = CascadeType.PERSIST, fetch = FetchType.LAZY)
     @JoinColumn(name = "momento_id", referencedColumnName = "id")
     List<ComentarioModel> comentarios;
 }

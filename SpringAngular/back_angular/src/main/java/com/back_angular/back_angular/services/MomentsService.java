@@ -37,4 +37,10 @@ public class MomentsService {
         momentResponse.setMensagem("cadastrado com sucesso");
         return new ResponseEntity<MomentResponse>(momentResponse, HttpStatus.OK);
     }
+
+    public MomentsModel getMomento(Long id) {
+        MomentsModel momento = mRepository.findById(id).orElseThrow();
+
+        return momento;
+    }
 }
