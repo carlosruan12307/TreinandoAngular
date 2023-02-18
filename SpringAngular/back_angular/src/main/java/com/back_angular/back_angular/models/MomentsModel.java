@@ -33,7 +33,7 @@ public class MomentsModel implements Serializable {
     private Date data;
 
     private String url;
-    private String sobre;
+    private String descricao;
     @OneToMany(cascade = CascadeType.PERSIST, fetch = FetchType.LAZY)
     @JoinColumn(name = "momento_id", referencedColumnName = "id")
     List<ComentarioModel> comentarios;
