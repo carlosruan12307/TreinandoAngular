@@ -43,4 +43,10 @@ public class MomentsService {
 
         return momento;
     }
+
+    public List<MomentsModel> getAllMomentos() {
+        List<MomentsModel> momentos = mRepository.findAll();
+
+        return momentos;
+    }
 }

@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.List;
 
 import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,7 +31,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.websocket.server.PathParam;
 
 @RestController
-@CrossOrigin(origins = "*")
+
 public class MomentController {
 
     @Autowired
@@ -48,10 +49,11 @@ public class MomentController {
     public ResponseEntity<MomentResponse> cadastrarMomento(@RequestPart("file") MultipartFile file,
             @RequestPart("moment") MomentsModel moment)
             throws IOException {
-        Path a = Paths.get("src/main/resources/static/" + file.getOriginalFilename());
-        if (!(Files.exists(a))) {
-
-            Files.copy(file.getInputStream(), a.resolve(file.getOriginalFilename()));
+        System.out.println(file.getOriginalFilename());
+        Path pathFileExist = Paths.get("src/main/resources/static/" + file.getOriginalFilename());
+        if (!(Files.exists(pathFileExist))) {
+            Path pathImages = Paths.get("src/main/resources/static/");
+            Files.copy(file.getInputStream(), pathImages.resolve(file.getOriginalFilename()));
         }
         return mService.cadastrarMomento(moment, (webMvc.getUrlImages() + file.getOriginalFilename()));
 
@@ -60,5 +62,10 @@ public class MomentController {
     @GetMapping("/momento/{id}")
     public MomentsModel getMomento(@PathVariable("id") Long id) {
         return mService.getMomento(id);
+    }
+
+    @GetMapping("/momentos")
+    public List<MomentsModel> getAllMomentos() {
+        return mService.getAllMomentos();
     }
 }
