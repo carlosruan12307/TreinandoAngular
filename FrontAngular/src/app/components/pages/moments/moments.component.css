@@ -7,6 +7,21 @@
   justify-content: center;
   padding: 2.5em;
 }
+
+.card-moment {
+  width: calc(100% / 3);
+  cursor: pointer;
+}
+@media screen and (max-width: 1400px) {
+  .card-moment {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .card-moment {
+    width: 100%;
+  }
+}
 .container-search {
   display: flex;
   height: 4vh;
