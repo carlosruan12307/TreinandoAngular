@@ -6,10 +6,13 @@
     <input class="input-moments" type="text" placeholder="Ou busque por um momento..." name="name" />
 
   </div>
-<div *ngFor="let moment of moments">
-  <img [src]="urlBackEnd + '' + moment.url">
+  <div class="d-flex flex-xxl-row flex-sm-column  flex-wrap align-items-center justify-content-xxl-center p-3">
+    <div class="card-moment pointer-event m-5" *ngFor="let moment of moments">
+      <img class="w-100" [src]="urlBackEnd + '' + moment.url">
 
-</div>
+    </div>
+  </div>
+
 
 
 
